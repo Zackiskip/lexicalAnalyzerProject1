@@ -2,16 +2,16 @@
 import java.util.*;
 
 public class Lexer {
+    public char symbol=' ';
     public static enum Type {
+        ADDITION, SUBTRACTION, MULTIPLICATION,DIVISION,NONOPERATOR,EQUALS,;}
 
-        ADDITION('+'), SUBTRACTION('-'), MULTIPLICATION('*'),DIVISION('/'),NONOPERATOR(' '),EQUALS('='),;
-        private final char symbol;
 
-        Type(char symbol) {
+    public void changeSymbol(char symbol) {
             this.symbol=symbol;
 
         }
-    }
+
 
     public static class Token {
         public final Type t;
